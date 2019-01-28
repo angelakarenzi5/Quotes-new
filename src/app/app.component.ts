@@ -1,13 +1,18 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
+import {Quote} from './quote'
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html"
+  selector: 'app-root',
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  Quotes: string[];
+    quotes = [
+        new Quote(1,'Create new quote'),
+        new Quote(2,'Author of quote'),
+        new Quote(3, 'Upvote quote'),
+        new Quote(4, 'Downvote quote'),
+        new Quote(5, 'Number of Upvotes'),
+        new Quote(6, 'Number of Downvotes'),
 
-  constructor() {
-    this.Quotes = ["Create new quote","Author of quote", "Upvote quote", "Downvote quote", "Number of upvotes and number of downvotes"];
-  }
+    ]
 }
