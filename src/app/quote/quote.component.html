@@ -1,5 +1,10 @@
 <h1>My Quotes</h1>
+<hr>
+
 <ul>
-  <li *ngFor="let quote of quotes">{{ quote.name }}</li>
+    <div *ngFor='let quote of quotes'>
+        <li >{{quote.name}}</li> 
+        <app-quote-details [quote]='quote'></app-quote-details>
+    </div>
 </ul>
-<p *ngIf="quotes.length > 5">You have too many quotes</p>
+<p *ngIf='quotes.length > 5'>You have too many quotes</p>
