@@ -1,7 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1> Quotes </h1>
-<p> Create a new{{quote}} </p>
-<h2>Upvote quote</h2>
-<h2>Downvote quote</h2>
-<h2>Delete quote</h2>
-<h3>Number of Upvotes and downvotes</h3>
+<h1>Quotes</h1>
+<ul>
+  <li *ngFor="let quote of quotes">{{ quote }}</li>
+</ul>
