@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { QuoteFormComponent } from './quote-form.component';
+import { QuoteFormComponent } from "./quote-form.component";
 
-describe('QuoteFormComponent', () => {
+describe("QuoteFormComponent", () => {
   let component: QuoteFormComponent;
   let fixture: ComponentFixture<QuoteFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuoteFormComponent ]
-    })
-    .compileComponents();
+      declarations: [QuoteFormComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('QuoteFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
