@@ -10,38 +10,38 @@ export class QuoteComponent implements OnInit {
   quotes = [
     new Quote(
       1,
-      "Create new quote",
-      "Write down your quote here",
+      "Education is the most powerful weapon which you can use to change the world.",
+      "Nelson Mandela",
       new Date(2019, 3, 14)
     ),
     new Quote(
       2,
-      "Author of quote",
-      "Write the name of the person who wrote quote",
+      "An investment in knowledge pays the best interest.",
+      "Benjamin Franklin",
       new Date(2019, 6, 9)
     ),
     new Quote(
       3,
-      "Upvote quote",
-      "This upvote quote selection shows you liked the quote",
+      "Education is not preparation for life; education is life itself.",
+      "John Dewey",
       new Date(2019, 1, 12)
     ),
     new Quote(
       4,
-      "Downvote quote",
-      "This downvote quote selection shows you disliked the quote ",
+      "Develop a passion for learning. If you do, you will never cease to grow",
+      "Anthony J.D'Angelo",
       new Date(2019, 1, 12)
     ),
     new Quote(
       5,
-      "Number of Upvotes",
-      "This is the total number of upvotes for this quote ",
+      "The roots of education are bitter, but the fruit is sweet.",
+      "Aristotle",
       new Date(2019, 5, 18)
     ),
     new Quote(
       6,
-      "Number of Downvotes",
-      "This shows the total number of downvotes for this quote",
+      "Education is the passport to the future, for tomorrow belongs to those who prepare for it today.",
+      "Malcom X",
       new Date(2019, 3, 12)
     )
   ];
