@@ -1,10 +1,24 @@
-<h1>My Quotes</h1>
+<h1>Quotes</h1>
+
+<p>Posts your quotes here!!!</p>
+<hr>
 
 <div class="container">
 
-    <div class="row">
-        <app-quote-form (addQuote)="addNewGoal($event)"></app-quote-form>
-    </div>
-    
+   <div class="row">
+       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+   </div>
+
 </div>
-<p *ngIf='quotes.length > 5'>You have too many quotes</p>
+
+<div class="container">
+<div class="row" *ngFor="let quote of quotes;let i = 'index'">
+<ul>
+       <li >{{quote.name}}</li>
+       <button (click)='toogleDetails(i)'>Show Author</button>
+
+       <app-quote-details [quote]='quote'></app-quote-details>
+</ul>
+</div>
+
+</div>
