@@ -1,6 +1,4 @@
 export class Quote {
-    public upvotes: number;
-    public downvotes:number;
   public showAuthor: boolean;
   constructor(
     public id: number,
@@ -8,8 +6,6 @@ export class Quote {
     public author: string,
     public completeDate: Date
   ) {
-    this.upvotes=0;
-    this.downvotes=0;
     this.showAuthor = false;
   }
 }

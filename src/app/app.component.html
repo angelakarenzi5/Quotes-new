@@ -1,9 +1,5 @@
 <app-quote>
-  <div *ngFor="let quote of quotes; let i = index">
-    <app-quote-details
-      *ngIf="quote.showDescription"
-      [quote]="quote"
-      (isComplete)="deleteQuote($event, i)"
-    ></app-quote-details>
+<div *ngFor='let quote of quotes;let i = index'>
+    <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
   </div>
 </app-quote>

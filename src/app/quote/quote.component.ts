@@ -45,40 +45,30 @@ export class QuoteComponent implements OnInit {
       new Date(2019, 3, 12)
     )
   ];
-];
-number: number;
-number1: number;
-counter: number;
+  deleteQuote(isComplete, index) {
+    if (isComplete) {
+      let toDelete = confirm(
+        `Are you sure you want to delete ${this.quotes[index].name}`
+      );
 
-addQuote(emittedQuote) {
-    this.quotes.push(emittedQuote);
-}
-toogleDetails(y) {
-    this.quotes.splice(y, 1);
-}
-
-upvote(i) {
-    this.quotes[i].upvotes += 1;
-}
-downvote(i) {
-    this.quotes[i].downvotes += 1;
-}
-delQuote(i) {
-    this.quotes.splice(i, 1);
-}
-highestUpvote() {
-    this.number = 0;
-    this.number1 = 0;
-
-    for (this.counter = 0; this.counter < this.quotes.length; this.counter++) {
-        this.number1 = this.quotes[this.counter].upvotes;
-        if (this.number1 > this.number) {
-            this.number = this.number1;
-        }
+      if (toDelete) {
+        this.quotes.splice(index, 1);
+      }
     }
-    return this.number1;
-}
-constructor() {}
-
-ngOnInit() {}
+  }
+  addNewQuote(quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.completeDate = new Date(quote.completeDate);
+    this.quotes.push(quote);
+  }
+  toogleDetails(index) {
+    this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+  }
+  completeQuote(isComplete, index) {
+    if (isComplete) {
+      this.quotes.splice(index, 1);
+    }
+  }
+  ngOnInit() {}
 }

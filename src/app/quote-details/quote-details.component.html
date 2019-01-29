@@ -1,28 +1,36 @@
-<p>{{quote.description}}</p>
+<p>{{quote.author}}</p>
 <p>This quote will be completed in {{quote.completeDate|dateCount}} days</p>
 <button (click) = 'quoteDelete(true)'> Delete Quote </button>
+<div class="four wide column center aligned votes">
+    <div class="ui statistic">
 
+      <div class="value">
+        {{ votes }}
+      </div>
+      <div class="label">
+        Votes:
+      </div>
 
-<div class="container">
-    <p>
-      <strong>Publisher:</strong>{{project.name}}
-    </p>
-    <p><strong>Quotes:</strong>{{project.quote}}</p>
-    <p>
-      <strong>Author:</strong>{{project.author}}
-    </p>
-    <p>
-      <strong>Upvotes:</strong>{{project.upvotes}}
-    </p>
-    <p>
-      <strong>Downvotes:</strong>{{project.downvotes}}
-    </p>
-    <p>
-      <strong>Date:</strong>{{project.myDate | dateCount}}
-    </p>
-    <!-- <p>{{project.description}}</p> -->
-    <!-- <p><strong>This quote has been displayed in </strong> {{project.completeDate|dateCount}} days</p> -->
-   </div>
-   <br>
-   
-   
+    </div>
+
+  </div>
+
+  <div class="twelve wide column">
+
+    <ul class="ui big horizontal list voters">
+      <li class="item">
+        <a href (click)="likeVote()">
+        <i class="arrow up icon"></i>
+          upvote
+        </a>
+      </li>
+
+      <li class="item">
+        <a href (click)="dislikeVote()">
+        <i class="arrow down icon"></i>
+          downvote
+        </a>
+      </li>
+
+    </ul>
+  </div>
