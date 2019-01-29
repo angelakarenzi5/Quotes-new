@@ -1,3 +1,28 @@
 <p>{{quote.description}}</p>
 <p>This quote will be completed in {{quote.completeDate|dateCount}} days</p>
 <button (click) = 'quoteDelete(true)'> Delete Quote </button>
+
+
+<div class="container">
+    <p>
+      <strong>Publisher:</strong>{{project.name}}
+    </p>
+    <p><strong>Quotes:</strong>{{project.quote}}</p>
+    <p>
+      <strong>Author:</strong>{{project.author}}
+    </p>
+    <p>
+      <strong>Upvotes:</strong>{{project.upvotes}}
+    </p>
+    <p>
+      <strong>Downvotes:</strong>{{project.downvotes}}
+    </p>
+    <p>
+      <strong>Date:</strong>{{project.myDate | dateCount}}
+    </p>
+    <!-- <p>{{project.description}}</p> -->
+    <!-- <p><strong>This quote has been displayed in </strong> {{project.completeDate|dateCount}} days</p> -->
+   </div>
+   <br>
+   
+   

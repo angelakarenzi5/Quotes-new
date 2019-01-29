@@ -17,7 +17,7 @@
        <li >{{quote.name}}</li>
        <button (click)='toogleDetails(i)'>Show Author</button>
 
-       <app-quote-details [quote]='quote'></app-quote-details>
+       <app-quote-details *ngIf="quote.showAuthor" [quote]='quote'(isComplete)= 'deleteQuote($event,i)' ></app-quote-details>
 </ul>
 </div>
 
